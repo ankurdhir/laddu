@@ -1,0 +1,315 @@
+# Cursor Master Prompt
+
+## Protein & Fitness Laddoo – Static Animated Website
+
+> **Purpose of this document**
+> This is the **single source of truth** prompt to be pasted into **Cursor**.
+> It is intentionally explicit to prevent over-engineering, wrong frameworks, backend hallucinations, or animation abuse.
+> This document will be refined iteratively as the build progresses.
+
+---
+
+## 1. Role & Objective
+
+You are an **expert frontend engineer and UI developer**.
+
+Your task is to **build a fully static, highly visual, animated website** for a brand called **“Protein & Fitness Laddoo”**, strictly following the requirements and constraints below.
+
+The final site must feel:
+
+* Premium
+* Warm & appetizing
+* Modern fitness-focused (not clinical)
+* Fast, smooth, and conversion-oriented
+
+---
+
+## 2. Core Constraints (NON-NEGOTIABLE)
+
+### Deployment
+
+* Must be deployable on **GitHub Pages**
+* Must be a **fully static website**
+* Use **only**:
+
+  * HTML
+  * CSS
+  * JavaScript (ES6 modules)
+
+🚫 **Do NOT use**:
+
+* React, Vue, Angular, Svelte, Next.js
+* Node.js servers
+* Firebase / Supabase / backend APIs
+* Build steps, bundlers, or CLIs
+* Databases or authentication systems
+
+---
+
+## 3. Mandatory Tech Stack
+
+* **Styling:** Tailwind CSS (via CDN or compiled static CSS)
+* **Animations:** GSAP (GreenSock Animation Platform)
+
+  * Use GSAP **only** for:
+
+    * Hero section animations
+    * “Build Your Laddoo” configurator feedback
+    * Scroll-based section reveals
+  * Avoid animating every UI element
+* **Icons:** Lucide Icons or Phosphor Icons (SVG-based)
+* **State Management:** Client-side JavaScript only
+
+---
+
+## 3.1 Image Sourcing & Usage (IMPORTANT)
+
+**Image Source Rules**
+
+* Use **free, online-available images only** with permissive licenses
+* Preferred sources:
+
+  * Unsplash
+  * Pexels
+  * Pixabay
+* Do NOT hotlink images; download and store them locally in the repo
+* Always choose images that match the brand style (warm, food-focused, premium)
+
+**Image Style Reference**
+
+* Follow the visual direction shown in the **sample website mockup image** previously shared:
+
+  * Large hero laddoo close-ups
+  * Floating ingredient elements around the product
+  * Clean, modern layout with strong imagery
+  * Soft shadows and warm lighting
+
+**Placeholders**
+
+* If exact images are not available, use high-quality placeholders from the sources above
+* Image filenames should clearly indicate intent (e.g., hero-laddoo.jpg, badam-laddoo.jpg)
+
+---
+
+* **Styling:** Tailwind CSS (via CDN or compiled static CSS)
+* **Animations:** GSAP (GreenSock Animation Platform)
+
+  * Use GSAP **only** for:
+
+    * Hero section animations
+    * “Build Your Laddoo” configurator feedback
+    * Scroll-based section reveals
+  * Avoid animating every UI element
+* **Icons:** Lucide Icons or Phosphor Icons (SVG-based)
+* **State Management:** Client-side JavaScript only
+
+---
+
+## 4. Design Philosophy – “Modern Heritage”
+
+### Visual Direction
+
+* Traditional Indian warmth + modern fitness clarity
+* Cream / off-white backgrounds (❌ avoid pure white)
+* Saffron gold, nut browns, pistachio greens
+* Premium food photography (warm light, shallow depth)
+* No gym clichés, no medical/pharma aesthetics
+
+### UX Rules
+
+* Mobile-first
+* Large touch targets
+* Hover effects must degrade gracefully on mobile
+* Animations must enhance clarity, not distract from ordering
+* Site must remain usable with reduced motion enabled
+
+---
+
+## 5. Pages & Sections
+
+### 5.1 Homepage
+
+**Hero Section**
+
+* Large laddoo visual
+* Floating ingredient elements (subtle GSAP animation)
+* Headline:
+
+  > “Protein-packed laddoos. Built for your goals.”
+
+**Primary CTAs**
+
+* Build Your Laddoo
+* Explore Fitness Laddoos
+
+**Goal Entry Cards**
+
+* Muscle
+* Recovery
+* Endurance
+* Low Sugar
+
+---
+
+### 5.2 Fitness Laddoos (Presets)
+
+Create product cards for:
+
+1. Mix Dry Fruit Laddoo – Everyday Strength
+2. Badam-Dominant Laddoo – Mind & Energy
+3. Kaju-Dominant Laddoo – Muscle & Recovery
+4. Gond Laddoo – Joint & Warmth
+5. Protein-Packed Laddoo – Gym Fuel (with Whey)
+6. Omega Recovery Laddoo
+7. Endurance Seed Laddoo
+8. Light Energy Makhana Laddoo
+
+Each card must display:
+
+* Image placeholder
+* Dominant ingredient badge
+* 2–3 fitness tags (Protein / Omega / Energy)
+* “View Details” CTA
+
+---
+
+### 5.3 Ingredient Transparency Section
+
+Ingredient cards must show:
+
+* Ingredient name
+* One-line positive benefit
+* Icons for muscle / energy / recovery
+
+Rules:
+
+* No medical or disease claims
+* Simple, friendly language only
+
+---
+
+### 5.4 Build Your Own Laddoo (Configurator) – CRITICAL FEATURE
+
+#### Layout
+
+* Desktop: Split screen
+* Mobile: Stacked
+
+#### Visual Area
+
+* Central laddoo image
+* Ingredients visually add to the laddoo (GSAP-driven, subtle)
+
+#### Controls
+
+* Custom sliders (not browser defaults) for:
+
+  * Badam
+  * Kaju
+  * Akhrot
+  * Seeds
+  * Whey Protein (optional)
+* Selectors for:
+
+  * Base (Besan / Aata / Goond)
+  * Fat (Ghee / Oil)
+  * Sweetener (Honey / Jaggery / Sugar / Sugar-Free)
+* Quantity selector (kg)
+
+#### Real-time Feedback
+
+* Nutrition panel:
+
+  * Calories
+  * Protein
+  * Carbs
+  * Fats
+* Live price calculation
+* Smooth number transitions using GSAP
+
+#### Logic Rules
+
+* Enforce ingredient min/max limits
+* Ensure laddoo is physically feasible (binding rules)
+* Show friendly UI feedback when constraints break
+
+---
+
+## 6. Ordering System (NO BACKEND)
+
+### Order Flow
+
+1. User fills form:
+
+   * Name
+   * Phone
+   * Address
+   * Selected laddoo (preset or custom)
+2. On “Place Order”:
+
+   * Generate client-side Order ID (timestamp + random suffix)
+   * POST order data to **Google Apps Script Webhook**
+   * Open **WhatsApp** with a pre-filled message containing order details
+
+### Rules
+
+* No payments
+* No sensitive data storage
+* Basic client-side validation required
+
+---
+
+## 7. Performance & Quality Bar
+
+* Page load < 3s on mobile
+* Lazy-load images below the fold
+* Keep JavaScript lightweight
+* Animations must be non-blocking
+* Core functionality must work without animations
+
+---
+
+## 8. Deliverables
+
+Produce:
+
+* Clean, well-structured HTML files
+* Modular, readable JavaScript
+* Tailwind-based styling
+* Placeholder images where required
+* Clear inline comments for key logic
+
+Also include:
+
+* A short README explaining:
+
+  * GitHub Pages deployment steps
+  * Google Apps Script webhook configuration
+
+---
+
+## 9. Absolute DO NOTs
+
+🚫 Do NOT introduce:
+
+* Backend servers
+* Frontend frameworks
+* Authentication
+* Payment gateways
+* Overly complex or excessive animations
+* Medical or disease-related claims
+
+---
+
+## 10. Success Criteria
+
+The final site should:
+
+* Feel premium and appetizing within 5 seconds
+* Make customization fun and intuitive
+* Clearly communicate nutrition and benefits
+* Be fast, stable, and GitHub Pages–ready
+
+---
+
+**Status:** Editable Master Prompt (v1)

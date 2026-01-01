@@ -1,0 +1,265 @@
+# Product Requirements Document (PRD)
+
+## Protein & Fitness Laddoo – Customizable Nutrition Website
+
+---
+
+## 1. Product Overview
+
+### Product Name (Working)
+
+Protein & Fitness Laddoo (name TBD)
+
+### Vision
+
+Create a visually rich, mobile-first website where users can:
+
+* Buy **predefined fitness laddoos** (traditional + modern nutrition)
+* **Customize laddoos** by ingredient proportions
+* Clearly understand **nutrition, protein, vitamins, and benefits**
+
+The product should feel:
+
+* Premium, warm, Indian
+* Fitness-focused but not clinical
+* Fun, interactive, and trustworthy
+
+---
+
+## 2. Target Users
+
+### Primary Users
+
+* Gym-goers & fitness enthusiasts
+* Health-conscious professionals (25–45)
+
+### Secondary Users
+
+* Families seeking healthier sweets
+* Corporate gifting buyers
+
+---
+
+## 3. Core User Goals
+
+Users should be able to:
+
+1. Quickly understand **what makes these laddoos different**
+2. Choose laddoos based on **fitness goals** (muscle, recovery, energy)
+3. Trust the **nutrition & ingredient transparency**
+4. Customize a laddoo without confusion
+5. Order in kilos with clear pricing
+
+---
+
+## 4. Key Features (High Level)
+
+### 4.1 Homepage
+
+**Goal:** Capture attention and explain value within 5 seconds
+
+Requirements:
+
+* Hero section with premium laddoo imagery
+* Clear headline (protein + tradition)
+* CTAs: "Build Your Laddoo" and "Explore Fitness Laddoos"
+* Goal-based entry points (Muscle, Recovery, Endurance, Low Sugar)
+
+---
+
+### 4.2 Predefined Laddoos (Presets)
+
+**Rule:** Every laddoo contains mixed dry fruits/seeds but is dominant in one key ingredient
+
+Required Presets:
+
+1. Mix Dry Fruit Laddoo – Everyday Strength
+2. Badam-Dominant Laddoo – Mind & Energy
+3. Kaju-Dominant Laddoo – Muscle & Recovery
+4. Gond Laddoo – Joint & Warmth
+5. Protein-Packed Laddoo – Gym Fuel (with Whey)
+6. Omega Recovery Laddoo – Omega-3 focused
+7. Endurance Seed Laddoo – High fiber & slow energy
+8. Light Energy Makhana Laddoo – Low-fat
+
+Each preset page must show:
+
+* Product images
+* Dominant ingredient callout
+* Nutrition highlights (protein, calories, key vitamins)
+* Fitness benefit tags
+* Allergen info
+
+---
+
+### 4.3 Ingredient Transparency
+
+**Goal:** Build trust
+
+Requirements:
+
+* Ingredient cards with:
+
+  * Name
+  * 1-line benefit (positive-only)
+  * Key vitamins/minerals
+  * Fitness tags (muscle, energy, recovery)
+* No medical claims
+* Simple language
+
+Ingredients to support:
+
+* Nuts & dry fruits
+* Seeds
+* Bases (besan, aata, goond)
+* Fats (ghee, oil)
+* Sweeteners (honey, jaggery, sugar, sugar-free)
+* Whey protein
+
+---
+
+### 4.4 Build Your Own Laddoo (Configurator)
+
+**Goal:** Fun, intuitive customization
+
+User should be able to:
+
+* Select ingredient quantities (within allowed limits)
+* Choose base, fat, and sweetener
+* Add whey protein optionally
+* Select order quantity (in kg)
+
+UI Requirements:
+
+* Central laddoo visual
+* Ingredient sliders or controls
+* Live nutrition updates (calories, protein, carbs, fats)
+* Live price calculation
+
+System Constraints:
+
+* Enforce min/max limits per ingredient
+* Ensure laddoo is physically feasible (binding rules)
+
+---
+
+### 4.5 Nutrition Display
+
+Rules:
+
+* Show nutrition **per 100g** as default
+* Optional per-serving view later
+* Display:
+
+  * Calories
+  * Protein
+  * Carbs
+  * Fats
+* Highlight vitamins/minerals in text (not numeric RDA claims)
+
+Disclaimer required:
+"Nutritional values are approximate and for guidance only."
+
+---
+
+### 4.6 Ordering & Pricing
+
+Requirements:
+
+* Quantity selection in kilograms
+* Transparent price breakdown:
+
+  * Ingredient cost
+  * Preparation fee
+  * Packaging
+* Lead time messaging (fresh preparation)
+
+---
+
+## 5. Non-Functional Requirements
+
+### 5.1 Design & UX
+
+* Mobile-first
+* Highly visual (large images, minimal text)
+* Smooth, subtle animations
+* No gym clichés or medical visuals
+
+### 5.2 Performance
+
+* Fast page load (<3s on mobile)
+* Images optimized for web
+
+### 5.3 Accessibility
+
+* Readable fonts
+* Reduced motion option
+
+### 5.4 Deployment & Architecture Constraints (IMPORTANT)
+
+**Hosting**
+
+* Website will be deployed on **GitHub Pages**
+* Must be a **fully static site** (HTML + CSS + JavaScript only)
+* No backend server, no Node server, no database
+
+**Frontend Requirements**
+
+* Pure JavaScript (Vanilla JS or lightweight framework)
+* All state handled client-side
+* Nutrition & pricing calculations done in-browser
+
+**Order Collection**
+
+* Orders will be stored via **Google Sheets integration**
+* Use one of the following approaches:
+
+  * Google Forms (hidden, auto-filled via JS)
+  * Google Apps Script Web App (preferred)
+
+**Security Constraints**
+
+* No sensitive payment data stored
+* No API keys exposed directly in frontend JS
+* Basic spam protection (honeypot / simple validation)
+
+---
+
+## 6. Compliance & Safety
+
+* FSSAI compliance assumed
+* Clear allergen labeling
+* No disease cure/prevention claims
+* Ingredient-based benefit language only
+
+---
+
+## 7. Out of Scope (For v1)
+
+* Fitness app integrations
+* Subscription plans
+* Personalized diet recommendations
+* Medical nutrition advice
+
+---
+
+## 8. Success Metrics
+
+* Time spent on configurator
+* Conversion rate on presets
+* Repeat orders
+* Saved custom laddoo usage
+
+---
+
+## 9. Open Questions
+
+1. Final brand name
+2. Final ingredient limits per laddoo
+3. Shelf-life communication
+4. Whether to show exact nutrition numbers or ranges
+
+---
+
+**Status:** PRD v1 – Ready for design & engineering handoff
+

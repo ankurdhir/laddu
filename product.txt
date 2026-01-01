@@ -1,0 +1,282 @@
+# Protein & Fitness Laddoo – Concept Artifact
+
+> **Purpose of this document**
+> This is a living concept document for a **fitness-focused, customizable laddoo brand**. It captures all raw ingredients and predefined laddoo concepts discussed so far. We will refine this iteratively (copy, nutrition depth, compliance, recipes) before moving to design or implementation.
+
+---
+
+## 1. Brand & Product Vision
+
+**Core Idea**
+Traditional, mom-style laddoos reimagined for fitness enthusiasts — with transparent nutrition, protein-forward options, seed-based modern ingredients, and the ability to customize mixes based on goals.
+
+**Positioning**
+
+* Traditional + modern nutrition
+* Protein-packed laddoos (plant + whey)
+* Clear ingredient-level benefits (positive-only)
+* Gym-friendly, clean-label mindset
+
+**Target Audience**
+
+* Gym-goers & fitness enthusiasts
+* Health-conscious families
+* Corporate gifting (healthy alternatives)
+* Athletes looking for convenient calorie/protein snacks
+
+---
+
+## 2. Ingredient Philosophy & Rules
+
+* Only **real, recognizable ingredients**
+* Benefits written in **positive, non-medical language** ("supports", "contributes to")
+* Nutrition values are **approximate averages**, not medical claims
+* Each ingredient tagged by **fitness role** (muscle, energy, recovery, etc.)
+* All allergens clearly declared
+
+---
+
+## 3. Raw Ingredient Master List
+
+### A. Nuts & Dry Fruits
+
+#### Badam (Almond)
+
+* Key nutrients: Protein, healthy fats
+* Vitamins/minerals: Vitamin E, Magnesium
+* Fitness benefits: Steady energy, antioxidant support
+* Tags: brain, heart, recovery
+
+#### Kaju (Cashew)
+
+* Key nutrients: Protein, fats
+* Vitamins/minerals: Magnesium, Iron, Zinc
+* Fitness benefits: Muscle function, recovery
+* Tags: muscle, recovery
+
+#### Akhrot (Walnut)
+
+* Key nutrients: Healthy fats
+* Vitamins/minerals: Omega-3 (ALA), Copper
+* Fitness benefits: Brain support, recovery fats
+* Tags: brain, joint, recovery
+
+#### Kishmish (Raisins)
+
+* Key nutrients: Natural carbohydrates
+* Vitamins/minerals: Iron, Potassium
+* Fitness benefits: Quick workout energy
+* Tags: energy, endurance
+
+---
+
+### B. Seeds & Modern Fitness Ingredients
+
+#### Makhane (Fox Nuts / Lotus Seeds)
+
+* Key nutrients: Carbohydrates, low fat
+* Vitamins/minerals: Magnesium, Potassium
+* Fitness benefits: Clean, light energy
+* Tags: energy, low-fat
+
+#### Flax Seeds (Alsi)
+
+* Key nutrients: Healthy fats, fiber
+* Vitamins/minerals: Omega-3 (ALA), Magnesium
+* Fitness benefits: Recovery, gut health
+* Tags: omega-3, recovery, gut
+
+#### Chia Seeds (Chasku – assumed)
+
+* Key nutrients: Fiber, healthy fats
+* Vitamins/minerals: Omega-3 (ALA), Calcium
+* Fitness benefits: Endurance, digestion support
+* Tags: endurance, gut, bone
+
+#### Kharbuja Beej (Muskmelon Seeds)
+
+* Key nutrients: Plant protein, fats
+* Vitamins/minerals: Magnesium, Zinc, Iron
+* Fitness benefits: Muscle recovery
+* Tags: muscle, protein
+
+#### Pumpkin Seeds
+
+* Key nutrients: High plant protein
+* Vitamins/minerals: Magnesium, Zinc, Iron
+* Fitness benefits: Muscle strength, mineral intake
+* Tags: muscle, bone, protein
+
+---
+
+### C. Binders / Bases
+
+#### Besan (Gram Flour)
+
+* Key nutrients: Plant protein
+* Vitamins/minerals: B-vitamins, Iron
+* Fitness benefits: Muscle support, good binding
+* Tags: muscle, binding
+
+#### Aata (Whole Wheat Flour)
+
+* Key nutrients: Complex carbohydrates, fiber
+* Vitamins/minerals: B-vitamins
+* Fitness benefits: Sustained energy
+* Tags: energy, fiber
+
+#### Goond (Edible Gum)
+
+* Key nutrients: Carbohydrates (binder)
+* Vitamins/minerals: Trace minerals
+* Fitness benefits: Traditional joint & energy support
+* Tags: joint, binder
+
+---
+
+### D. Fats
+
+#### Ghee
+
+* Key nutrients: Healthy fats
+* Vitamins/minerals: Vitamins A, E, K (trace)
+* Fitness benefits: Calorie-dense energy, satiety
+* Tags: calorie-dense, recovery
+
+#### Neutral Oil
+
+* Key nutrients: Fats
+* Vitamins/minerals: Varies by oil
+* Fitness benefits: Dairy-free fat source
+* Tags: dairy-free
+
+---
+
+### E. Sweeteners
+
+#### Honey
+
+* Key nutrients: Natural sugars
+* Vitamins/minerals: Antioxidants (trace)
+* Fitness benefits: Quick post-workout energy
+* Tags: energy, natural
+
+#### Gud (Jaggery)
+
+* Key nutrients: Carbohydrates
+* Vitamins/minerals: Iron, Potassium (trace)
+* Fitness benefits: Unrefined sweetness
+* Tags: energy, natural
+
+#### Sugar
+
+* Key nutrients: Simple carbohydrates
+* Fitness benefits: Quick calories
+* Tags: high-carb
+
+#### Sugar-Free Sweetener
+
+* Key nutrients: Minimal calories
+* Fitness benefits: Low-sugar option
+* Tags: low-sugar
+
+---
+
+### F. Protein Additive
+
+#### Whey Protein (Concentrate / Isolate)
+
+* Key nutrients: High-quality protein
+* Vitamins/minerals: BCAAs, Calcium (varies)
+* Fitness benefits: Muscle synthesis, recovery
+* Tags: muscle, recovery, high-protein
+* Allergen: Dairy
+
+---
+
+## 4. Predefined Laddoo Concepts (Presets)
+
+> These are **hero products** that users can buy directly or use as starting points for customization.
+> **Important rule:** Every laddoo contains a **mix of dry fruits/seeds**, but is **dominant in one key ingredient** that defines its category and benefits.
+
+### 1. Mix Dry Fruit Laddoo – *Everyday Strength*
+
+* Focus: Balanced nutrition from multiple dry fruits
+* Key ingredients: Badam, Kaju, Akhrot, Kishmish (balanced proportions)
+* Highlights: Protein + healthy fats + natural carbs
+* Ideal for: Daily consumption, families, all-age nutrition
+
+### 2. Badam Laddoo – *Mind & Energy*
+
+* Focus: Almond-dominant dry fruit laddoo
+* Key ingredients: Badam (dominant) + Kaju, Akhrot, Kishmish (supporting)
+* Highlights: Vitamin E, healthy fats, protein
+* Ideal for: Mental focus, steady daily energy
+
+### 3. Kaju Laddoo – *Muscle & Recovery*
+
+* Focus: Cashew-dominant nutrition
+* Key ingredients: Kaju (dominant) + Badam, Seeds, Besan
+* Highlights: Magnesium & iron-rich, calorie-dense
+* Ideal for: Muscle recovery, post-workout snacking
+
+### 4. Gond Laddoo – *Joint & Warmth*
+
+* Focus: Traditional strength laddoo
+* Key ingredients: Goond (dominant) + Mixed dry fruits
+* Highlights: Binding energy, warming nutrition
+* Ideal for: Joint comfort, winter nutrition
+
+### 5. Protein-Packed Laddoo – *Gym Fuel*
+
+* Focus: High-protein laddoo
+* Key ingredients: Whey (dominant protein) + Seeds + Dry fruits
+* Highlights: Protein-rich, BCAA support
+* Ideal for: Post-workout recovery, gym-goers
+
+### 6. Omega Recovery Laddoo
+
+* Focus: Healthy fats & omega-3
+* Key ingredients: Akhrot, Flax, Chia (dominant fats) + Badam
+* Highlights: Omega-3 rich, recovery-friendly
+* Ideal for: Active lifestyles, inflammation-conscious diets
+
+### 7. Endurance Seed Laddoo
+
+* Focus: Fiber + slow energy release
+* Key ingredients: Chia, Flax, Pumpkin seeds (dominant) + Kishmish
+* Highlights: High fiber, sustained energy
+* Ideal for: Long workouts, endurance training
+
+### 8. Light Energy Makhana Laddoo
+
+* Focus: Low-fat, clean carbs
+* Key ingredients: Makhane (dominant) + Honey + Light dry fruits
+* Highlights: Light digestion, quick energy
+* Ideal for: Guilt-free snacking
+
+---
+
+## 5. Nutrition Communication Rules (Draft)
+
+* Show values **per 100 g** as standard
+* Optionally show **per laddoo (serving)** later
+* Always include disclaimer:
+  *"Nutritional values are approximate and based on standard ingredient data."*
+* No disease or medical cure claims
+
+---
+
+## 6. Open Questions / To Refine Next
+
+1. Confirm meaning of **“Chasku”** (chia vs other)
+2. Decide final **preset count** (6–8 max)
+3. Decide whether to show **exact numbers or ranges** initially
+4. Shelf-life communication strategy
+5. Regional ingredient naming (Hindi vs English vs both)
+
+---
+
+**Status:** Concept lock (v1)
+**Next step:** Refinement of presets → nutrition depth → UI copy
+
