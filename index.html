@@ -105,8 +105,12 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
+                <!-- Mobile Menu Button and Cart -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button id="cart-btn-mobile-nav" type="button" class="relative text-amber-900 hover:text-amber-600 p-2">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                        <span id="cart-count-mobile-nav" class="hidden absolute top-0 right-0 w-4 h-4 rounded-full bg-amber-600 text-white text-[10px] font-bold flex items-center justify-center">0</span>
+                    </button>
                     <button id="mobile-menu-btn" class="text-amber-900 hover:text-amber-600 p-2">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
@@ -122,10 +126,6 @@
                 <a href="#builder" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-amber-50 rounded-md">Build Your Own</a>
                 <button id="my-orders-btn-mobile" type="button" class="w-full flex items-center justify-between px-3 py-3 text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-amber-50 rounded-md">
                     <span class="flex items-center gap-2"><i data-lucide="receipt" class="w-5 h-5"></i> My Orders</span>
-                </button>
-                <button id="cart-btn-mobile" type="button" class="w-full flex items-center justify-between px-3 py-3 text-base font-medium text-amber-900 hover:text-amber-600 hover:bg-amber-50 rounded-md">
-                    <span class="flex items-center gap-2"><i data-lucide="shopping-bag" class="w-5 h-5"></i> Cart</span>
-                    <span id="cart-count-mobile" class="hidden w-6 h-6 rounded-full bg-amber-600 text-white text-xs font-bold flex items-center justify-center">0</span>
                 </button>
             </div>
         </div>
