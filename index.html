@@ -100,9 +100,14 @@
                         <i data-lucide="shopping-bag" class="w-6 h-6"></i>
                         <span id="cart-count" class="hidden absolute -top-2 -right-2 w-5 h-5 rounded-full bg-amber-600 text-white text-[10px] font-bold flex items-center justify-center">0</span>
                     </button>
-                    <a href="#builder" id="order-now-btn" class="bg-amber-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-amber-700 transform hover:scale-105 transition-all shadow-md inline-block">
-                        Order Now
-                    </a>
+                    <div class="flex gap-4">
+                        <a id="whatsapp-order-btn" href="https://wa.me/919811150234?text=Hi%2C%20I%20want%20to%20order%20laddoos" target="_blank" rel="noopener" class="bg-green-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-green-700 transform hover:scale-105 transition-all shadow-md inline-flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i> Order on WhatsApp
+                        </a>
+                        <a href="#builder" id="order-now-btn" class="bg-amber-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-amber-700 transform hover:scale-105 transition-all shadow-md inline-block">
+                            Order Now
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Mobile Menu Button and Cart -->
@@ -756,11 +761,7 @@
                     <p class="text-amber-200/80 mb-6">
                         Redefining traditional Indian sweets for the modern fitness enthusiast. 100% natural, protein-rich, and absolutely delicious.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                    </div>
+                    <!-- Social Links Removed -->
                 </div>
                 
                 <div>
@@ -782,11 +783,11 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="phone" class="w-5 h-5 text-amber-500"></i>
-                            <span>+91 98765 43210</span>
+                            <span>+91 98111 50234</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-5 h-5 text-amber-500"></i>
-                            <span>hello@theladdooco.com</span>
+                            <span>laddoolabs@gmail.com</span>
                         </li>
                     </ul>
                 </div>
@@ -806,24 +807,15 @@
     <script type="module" src="assets/js/main.js"></script>
     <script type="module" src="assets/js/animations.js"></script>
     <script>
-        // If you open this file via file://, ES module imports often fail and JS features break.
-        // Show a friendly hint if the app doesn't boot.
+        // Use a more robust check for module support or just remove the warning
+        // since the site is now deployed and functional.
+        /*
         setTimeout(() => {
             if (!window.__APP_BOOTED__) {
-                const banner = document.createElement('div');
-                banner.className = 'fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-[420px] bg-white border border-amber-200 shadow-xl rounded-2xl p-4 z-[80]';
-                banner.innerHTML = `
-                    <div class="font-bold text-amber-900 mb-1">Local server required</div>
-                    <div class="text-sm text-gray-600 mb-3">
-                        This site uses ES6 modules. Please run it via a local server (not by double-clicking the HTML).
-                    </div>
-                    <div class="text-xs font-mono bg-amber-50 border border-amber-100 rounded-xl p-3 text-amber-900">
-                        cd /Users/adhir/Downloads/ladoo && python3 -m http.server 8000
-                    </div>
-                `;
-                document.body.appendChild(banner);
+                // Warning logic removed for production
             }
         }, 800);
+        */
     </script>
     <script>
         // Update back-to-site button to close overlay and scroll to top
