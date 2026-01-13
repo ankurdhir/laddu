@@ -488,25 +488,25 @@
                 <p class="text-gray-600 max-w-2xl mx-auto">Customize ingredients to match your taste and fitness goals.</p>
             </div>
 
-            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div class="grid grid-cols-2 lg:grid-cols-12 gap-2 md:gap-8 lg:gap-12 items-start">
                 
                 <!-- Left: Visualizer & Highlights (Sticky on Desktop) -->
-                <div class="lg:col-span-5 lg:sticky lg:top-24 space-y-6">
+                <div class="col-span-1 lg:col-span-5 sticky top-24 z-10 space-y-4 lg:space-y-6">
                     <!-- Visualizer Card -->
-                    <div class="bg-white rounded-3xl p-8 shadow-xl border-4 border-amber-50 relative overflow-hidden text-center">
+                    <div class="bg-white rounded-3xl p-3 md:p-8 shadow-xl border-4 border-amber-50 relative overflow-hidden text-center">
                         <div class="absolute top-0 left-0 w-full h-2 bg-amber-200"></div>
-                        <h3 class="font-serif text-2xl font-bold text-amber-900 mb-6">Your Creation</h3>
+                        <h3 class="font-serif text-lg md:text-2xl font-bold text-amber-900 mb-4 md:mb-6">Your Creation</h3>
                         
                         <!-- Dynamic Laddoo Visual -->
-                        <div class="relative w-48 h-48 mx-auto mb-8">
-                            <div class="w-full h-full rounded-full bg-amber-100 border-4 border-amber-200 flex items-center justify-center shadow-inner">
-                                <span class="text-amber-800/40 font-serif text-lg">Dynamic Visual</span>
+                        <div class="relative w-24 h-24 md:w-48 md:h-48 mx-auto mb-4 md:mb-8">
+                            <div class="w-full h-full rounded-full bg-amber-100 border-4 border-amber-200 flex items-center justify-center shadow-inner overflow-hidden">
+                                <img src="assets/images/ladoo-animated.png" alt="Your Custom Laddoo" class="w-full h-full object-cover">
                             </div>
                             <!-- Decorative Elements around visual could go here -->
                         </div>
 
                         <!-- Highlights -->
-                        <div class="bg-amber-50 border border-amber-100 rounded-2xl p-5 mb-6 text-left">
+                        <div class="bg-amber-50 border border-amber-100 rounded-2xl p-3 md:p-5 mb-4 md:mb-6 text-left">
                             <div class="text-xs text-gray-500 uppercase tracking-wider font-bold mb-2">Your Laddoo Highlights</div>
 
                             <div class="mb-4">
@@ -526,17 +526,17 @@
                         </div>
 
                         <!-- Price & Action -->
-                        <div class="border-t border-gray-100 pt-6">
-                            <div class="flex items-end justify-center gap-2 mb-1">
-                                <span class="text-3xl font-bold text-gray-900" id="total-price">₹0</span>
-                                <span class="text-sm text-gray-500 mb-1" id="unit-price">(--/kg)</span>
+                        <div class="border-t border-gray-100 pt-3 md:pt-6">
+                            <div class="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 mb-1">
+                                <span class="text-xl md:text-3xl font-bold text-gray-900" id="total-price">₹0</span>
+                                <span class="text-xs md:text-sm text-gray-500 mb-0 md:mb-1" id="unit-price">(--/kg)</span>
                             </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-                                <button id="add-custom-to-cart" class="w-full py-4 bg-amber-600 text-white rounded-xl font-bold text-lg hover:bg-amber-700 hover:shadow-lg transition-all transform hover:-translate-y-1">
-                                    Add to Cart
+                            <div class="grid grid-cols-1 gap-2 md:gap-3 mt-2 md:mt-4">
+                                <button id="add-custom-to-cart" class="w-full py-2 md:py-4 bg-amber-600 text-white rounded-xl font-bold text-xs md:text-lg hover:bg-amber-700 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                                    Add
                                 </button>
-                                <button id="open-cart-from-builder" class="w-full py-4 bg-white border border-amber-200 text-amber-900 rounded-xl font-bold text-lg hover:bg-amber-50 transition-colors">
-                                    View Cart
+                                <button id="open-cart-from-builder" class="w-full py-2 md:py-4 bg-white border border-amber-200 text-amber-900 rounded-xl font-bold text-xs md:text-lg hover:bg-amber-50 transition-colors">
+                                    Cart
                                 </button>
                             </div>
                             <p class="text-xs text-gray-400 mt-3 text-center">Small batches. Big love. Delivered fresh.</p>
@@ -571,8 +571,8 @@
                 </div>
 
                 <!-- Right: Controls -->
-                <div class="lg:col-span-7">
-                    <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-amber-100">
+                <div class="col-span-1 lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-3 md:p-8 shadow-lg border border-amber-100">
                         <div id="configurator-controls" class="space-y-2">
                             <!-- Controls injected by JS -->
                             <div class="animate-pulse flex space-x-4">
@@ -779,11 +779,11 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3">
                             <i data-lucide="map-pin" class="w-5 h-5 text-amber-500 mt-1"></i>
-                            <span>123 Fitness Street, HSR Layout,<br>Bengaluru, India 560102</span>
+                            <span>11/9A , Rajendra Nagar<br>Uttar Pradesh, India 201005</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="phone" class="w-5 h-5 text-amber-500"></i>
-                            <span>+91 98111 50234</span>
+                            <span>+91-9217800234</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-5 h-5 text-amber-500"></i>

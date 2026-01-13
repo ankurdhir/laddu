@@ -16,7 +16,6 @@ export class Configurator {
 
     init() {
         this.renderControls();
-        this.bindEvents();
         this.updateFeedback();
         
         // Ensure buttons are wired correctly after first render
@@ -92,8 +91,8 @@ export class Configurator {
                 <h3 class="font-serif text-xl font-bold text-amber-900 mb-1">2. Pick ingredients</h3>
                 <p class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-3">Tap to add/remove. Benefits show instantly.</p>
                 <input id="ingredient-search" type="text" placeholder="Search ingredients (e.g., Vitamin E, joints, omega-3)…"
-                    class="w-full rounded-xl border border-amber-100 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-200 bg-cream"/>
-                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4" id="ingredient-grid"></div>
+                    class="w-full rounded-xl border border-amber-100 px-3 py-2 md:px-4 md:py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-200 bg-cream"/>
+                <div class="mt-4 grid grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-2" id="ingredient-grid"></div>
             </div>
 
             <div class="mb-6">
@@ -102,21 +101,21 @@ export class Configurator {
 
                 <div class="mb-4">
                     <label class="block text-sm font-semibold text-gray-700 mb-2">Base</label>
-                    <div class="grid grid-cols-3 gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-3">
                         ${ingredients.bases.map(base => this.renderRadioCard('base', base)).join('')}
                     </div>
                 </div>
 
                 <div class="mb-4">
                     <label class="block text-sm font-semibold text-gray-700 mb-2">Fat</label>
-                    <div class="grid grid-cols-2 gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
                         ${ingredients.fats.map(fat => this.renderRadioCard('fat', fat)).join('')}
                     </div>
                 </div>
 
                 <div class="mb-6">
                     <label class="block text-sm font-semibold text-gray-700 mb-2">Sweetener</label>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2 md:gap-3">
                         ${ingredients.sweeteners.map(sw => this.renderRadioCard('sweetener', sw)).join('')}
                     </div>
                 </div>
@@ -125,10 +124,10 @@ export class Configurator {
             <div class="mb-2">
                 <h3 class="font-serif text-xl font-bold text-amber-900 mb-1">4. Quantity</h3>
                 <p class="text-xs text-gray-500 uppercase tracking-wide font-medium mb-3">How much do you need?</p>
-                <div class="flex items-center gap-4 bg-amber-50 p-4 rounded-xl border border-amber-100">
-                    <button class="w-10 h-10 rounded-full bg-white border border-amber-200 text-amber-700 font-bold hover:bg-amber-100" onclick="configurator.updateQuantity(-0.5)">-</button>
-                    <span class="text-xl font-bold text-gray-900 w-24 text-center" id="qty-display">${this.state.quantityKg.toFixed(1)} kg</span>
-                    <button class="w-10 h-10 rounded-full bg-white border border-amber-200 text-amber-700 font-bold hover:bg-amber-100" onclick="configurator.updateQuantity(0.5)">+</button>
+                <div class="flex items-center gap-2 md:gap-4 bg-amber-50 p-2 md:p-4 rounded-xl border border-amber-100">
+                    <button class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white border border-amber-200 text-amber-700 font-bold hover:bg-amber-100" onclick="configurator.updateQuantity(-0.5)">-</button>
+                    <span class="text-lg md:text-xl font-bold text-gray-900 w-16 md:w-24 text-center" id="qty-display">${this.state.quantityKg.toFixed(1)} kg</span>
+                    <button class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white border border-amber-200 text-amber-700 font-bold hover:bg-amber-100" onclick="configurator.updateQuantity(0.5)">+</button>
                 </div>
             </div>
         `;
@@ -169,25 +168,25 @@ export class Configurator {
         const isSelected = !!this.state.selected[item.id];
         const vitamins = (item.vitaminsMinerals || []).slice(0, 3);
         const tags = (item.fitnessTags || []).slice(0, 3);
-        const allergen = (item.allergens || []).length ? `<span class="px-2 py-1 rounded-md bg-red-50 text-red-700 text-[10px] font-bold border border-red-100">Allergen</span>` : '';
+        const allergen = (item.allergens || []).length ? `<span class="px-1 py-0.5 rounded bg-red-50 text-red-700 text-[8px] md:text-[10px] font-bold border border-red-100">!</span>` : '';
 
         return `
             <button type="button"
-                class="text-left p-5 rounded-2xl border transition-all ${isSelected ? 'bg-amber-50 border-amber-300 shadow-sm' : 'bg-white border-amber-100 hover:border-amber-200'}"
+                class="text-left p-2 md:p-5 rounded-xl md:rounded-2xl border transition-all h-full flex flex-col justify-between ${isSelected ? 'bg-amber-50 border-amber-300 shadow-sm' : 'bg-white border-amber-100 hover:border-amber-200'}"
                 data-ingredient="${item.id}">
-                <div class="flex items-start justify-between gap-3">
-                    <div>
-                        <div class="font-bold text-gray-900">${item.name}</div>
-                        <div class="text-sm text-gray-600 mt-1">${item.benefit}</div>
+                <div class="flex flex-col md:flex-row items-start justify-between gap-1 md:gap-3 w-full">
+                    <div class="w-full">
+                        <div class="font-bold text-gray-900 text-xs md:text-base leading-tight">${item.name}</div>
+                        <div class="text-[10px] md:text-sm text-gray-600 mt-1 hidden md:block">${item.benefit}</div>
                     </div>
-                    <div class="shrink-0">
-                        <span class="px-3 py-1.5 rounded-full text-xs font-bold ${isSelected ? 'bg-amber-600 text-white' : 'bg-gray-100 text-gray-700'}">
-                            ${isSelected ? 'Added' : 'Add'}
+                    <div class="shrink-0 mt-1 md:mt-0">
+                        <span class="px-2 py-1 md:px-3 md:py-1.5 rounded-full text-[10px] md:text-xs font-bold ${isSelected ? 'bg-amber-600 text-white' : 'bg-gray-100 text-gray-700'}">
+                            ${isSelected ? '✓' : '+'}
                         </span>
                     </div>
                 </div>
 
-                <div class="mt-3 flex flex-wrap gap-2">
+                <div class="mt-2 flex flex-wrap gap-1 md:gap-2 hidden md:flex">
                     ${vitamins.map(v => `<span class="px-2 py-1 rounded-md bg-white text-amber-800 text-[10px] font-bold border border-amber-100">${v}</span>`).join('')}
                     ${tags.map(t => `<span class="px-2 py-1 rounded-md bg-white text-gray-700 text-[10px] font-bold border border-gray-100">${t}</span>`).join('')}
                     ${allergen}
