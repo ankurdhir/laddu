@@ -72,8 +72,8 @@ function renderPresets(filterTag = null) {
     }
 
     container.innerHTML = displayPresets.map(product => `
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-amber-100 h-full flex flex-col">
-            <div class="bg-amber-200 relative overflow-hidden group aspect-[3/4]">
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-amber-100 h-full flex flex-col">
+            <div class="bg-amber-200 relative overflow-hidden group aspect-[3/4] md:aspect-[3/4]">
                 ${product.image
                     ? `
                         <img
@@ -92,20 +92,20 @@ function renderPresets(filterTag = null) {
                         </div>
                     `
                 }
-                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-amber-800 uppercase tracking-wider shadow-sm z-30">
+                <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-white/90 backdrop-blur px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-bold text-amber-800 uppercase tracking-wider shadow-sm z-30">
                     ${product.tagline}
                 </div>
             </div>
-            <div class="p-6 flex-1 flex flex-col">
-                <div class="flex flex-wrap gap-2 mb-3">
+            <div class="p-3 md:p-6 flex-1 flex flex-col">
+                <div class="flex flex-wrap gap-1 md:gap-2 mb-2 md:mb-3 hidden md:flex">
                     ${product.tags.map(tag => `
                         <span class="px-2 py-1 bg-amber-50 text-amber-700 text-xs rounded-md font-medium">${tag}</span>
                     `).join('')}
                 </div>
-                <h3 class="font-serif text-xl font-bold text-gray-900 mb-1">${product.name}</h3>
-                <p class="text-gray-600 text-sm mb-3 line-clamp-2 flex-grow">${product.description}</p>
+                <h3 class="font-serif text-sm md:text-xl font-bold text-gray-900 mb-1 leading-tight">${product.name}</h3>
+                <p class="text-gray-600 text-xs md:text-sm mb-2 md:mb-3 line-clamp-2 flex-grow">${product.description}</p>
                 ${product.primaryIngredient ? `
-                    <div class="text-xs text-gray-700 mb-3">
+                    <div class="text-[10px] md:text-xs text-gray-700 mb-2 md:mb-3 hidden md:block">
                         <div class="font-bold text-amber-900 mb-2">Primary ingredients</div>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-white border border-amber-100 text-amber-800 text-xs rounded-md font-semibold">${product.primaryIngredient}</span>
@@ -115,15 +115,15 @@ function renderPresets(filterTag = null) {
                     </div>
                 ` : ''}
                 ${Array.isArray(product.keyIngredients) && product.keyIngredients.length
-                    ? `<div class="flex flex-wrap gap-2 mb-3">
+                    ? `<div class="flex flex-wrap gap-1 md:gap-2 mb-2 md:mb-3 hidden md:flex">
                         ${product.keyIngredients.slice(0, 5).map(i => `<span class="px-2 py-1 bg-white border border-amber-100 text-amber-800 text-xs rounded-md font-semibold">${i}</span>`).join('')}
                       </div>`
                     : ''
                 }
-                <div class="flex items-center justify-between mt-4 pt-4 border-t border-amber-50">
-                    <span class="text-lg font-bold text-amber-700">₹${product.price}<span class="text-sm text-gray-500 font-normal">/kg</span></span>
-                    <button type="button" data-add-preset="${product.id}" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
-                        Add to Cart
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between mt-2 md:mt-4 pt-2 md:pt-4 border-t border-amber-50 gap-2 md:gap-0">
+                    <span class="text-sm md:text-lg font-bold text-amber-700">₹${product.price}<span class="text-xs md:text-sm text-gray-500 font-normal">/kg</span></span>
+                    <button type="button" data-add-preset="${product.id}" class="w-full md:w-auto bg-amber-600 hover:bg-amber-700 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-semibold transition-colors">
+                        Add
                     </button>
                 </div>
             </div>
